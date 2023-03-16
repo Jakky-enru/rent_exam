@@ -35,13 +35,12 @@ class PropertiesController < ApplicationController
 
   # PATCH/PUT /properties/1 or /properties/1.json
   def update
-    respond_to do |format|
+    # respond_to do |format|
       if @property.update(property_params)
         redirect_to @property, notice: 'Property was successfully updated.'
       else
         render :edit
       end
-    end
   end
 
   # DELETE /properties/1 or /properties/1.json
